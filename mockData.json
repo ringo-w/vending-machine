@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": "A1",
+      "name": "Sweet Chili Heat Doritos",
+      "price": 200,
+      "currentQty": 10,
+      "maxQty": 10
+    },
+    {
+      "id": "A2",
+      "name": "Cheetos",
+      "price": 175,
+      "currentQty": 5,
+      "maxQty": 10
+    },
+    {
+      "id": "A3",
+      "name": "Miss Vickie's Jalapeno",
+      "price": 225,
+      "currentQty": 8,
+      "maxQty": 10
+    },
+    {
+      "id": "A4",
+      "name": "Lays Classic Jumbo",
+      "price": 275,
+      "currentQty": 5,
+      "maxQty": 5
+    }
+  ],
+  "change": [
+    {
+      "id": "Nickel",
+      "value": 5,
+      "currentQty": 50,
+      "maxQty": 50
+    },
+    {
+      "id": "Dime",
+      "value": 10,
+      "currentQty": 50,
+      "minQty": 50
+    },
+    {
+      "id": "Quarter",
+      "value": 25,
+      "currentQty": 50,
+      "minQty": 50
+    },
+    {
+      "id": "Loonie",
+      "value": 100,
+      "currentQty": 50,
+      "minQty": 50
+    },
+    {
+      "id": "Toonie",
+      "value": 200,
+      "currentQty": 50,
+      "minQty": 50
+    }
+  ]
+}
