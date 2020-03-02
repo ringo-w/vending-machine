@@ -14,9 +14,7 @@ The vending machine itself should be a Javascript class. You do not need to writ
 <!-- -->
 
 Screenshot of tests:
-![ScreenShot]("https://user-images.githubusercontent.com/36806106/75662475-045cf380-5c24-11ea-82b8-04c7b472611d.png">)
-
-</-- -->
+![ScreenShot]("https://user-images.githubusercontent.com/36806106/75662475-045cf380-5c24-11ea-82b8-04c7b472611d.png")
 
 ## Dependencies and Technologies Used
 
