@@ -11,7 +11,7 @@
       "id": "A2",
       "name": "Cheetos",
       "price": 175,
-      "currentQty": 5,
+      "currentQty": 2,
       "maxQty": 10
     },
     {
@@ -26,39 +26,44 @@
       "name": "Lays Classic Jumbo",
       "price": 275,
       "currentQty": 5,
-      "maxQty": 5
+      "maxQty": 10
     }
   ],
   "change": [
     {
       "id": "Nickel",
       "value": 5,
-      "currentQty": 50,
-      "maxQty": 50
+      "currentQty": 20,
+      "minQty": 50,
+      "maxQty": 100
     },
     {
       "id": "Dime",
       "value": 10,
       "currentQty": 50,
-      "minQty": 50
+      "minQty": 50,
+      "maxQty": 100
     },
     {
       "id": "Quarter",
       "value": 25,
-      "currentQty": 50,
-      "minQty": 50
+      "currentQty": 60,
+      "minQty": 50,
+      "maxQty": 100
     },
     {
       "id": "Loonie",
       "value": 100,
-      "currentQty": 50,
-      "minQty": 50
+      "currentQty": 49,
+      "minQty": 50,
+      "maxQty": 100
     },
     {
       "id": "Toonie",
       "value": 200,
       "currentQty": 50,
-      "minQty": 50
+      "minQty": 50,
+      "maxQty": 100
     }
   ]
 }
