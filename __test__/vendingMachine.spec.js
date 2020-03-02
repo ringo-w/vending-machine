@@ -71,12 +71,6 @@ describe("Vending Machine", () => {
     });
   });
 
-  describe("when calculating change", () => {
-    it("should check if there is sufficient change to give", () => {
-      expect(chipsAhoyMachine.restock()).toEqual(Inventory.products);
-    });
-  });
-
   describe("when restock method is called", () => {
     it("should restock the quantity of each chip to maxQty", () => {
       expect(chipsAhoyMachine.restock()).toEqual(Inventory.products);
