@@ -59,7 +59,7 @@ describe("Vending Machine", () => {
     });
   });
 
-  describe("when dispensing, calculate change", () => {
+  describe("when dispensing", () => {
     it("should return the proper amount of change", () => {
       expect(chipsAhoyMachine.calculateChange(30010, 100)).toEqual({
         Dime: 1,
@@ -70,29 +70,14 @@ describe("Vending Machine", () => {
       });
     });
   });
-  // describe("when dispensing", () => {
-  //   it("should return the proper amount of change", () => {
-  //     expect(() => chipsAhoyMachine.selectChip("B1")).toThrow();
-  //   });
-  // });
-  // check for restocking coins and products
 
-  //     it('should return payment if less than price', () => {
-  //       const result = machine.purchaseItem('A3', 4.25);
-  //       expect(result).toEqual('Insufficient Funds');
-  //     });
-  //     it('should return money if machine has insufficient change', () => {
-  //       const result = machine.purchaseItem();
-  //       expect(result).toEqual('Insufficient Funds');
-  //     });
-  //     it('should return correct change in the fewest coins possible', () => {
-  //       const result = machine.purchaseItem('A1', 6.65);
-  //       expect(result).toBe(
-  //         'Name: Tuna Sandwich, Change: $2.40 = $2*(1), $1*(0), 25¢*(1), 10¢*(1), 5¢*(0), VMQty: 4'
-  //       );
-  //     });
-  //   }); // end of purchaseItem()
-  describe("restock", () => {
+  describe("when calculating change", () => {
+    it("should check if there is sufficient change to give", () => {
+      expect(chipsAhoyMachine.restock()).toEqual(Inventory.products);
+    });
+  });
+
+  describe("when restock method is called", () => {
     it("should restock the quantity of each chip to maxQty", () => {
       expect(chipsAhoyMachine.restock()).toEqual(Inventory.products);
     });
