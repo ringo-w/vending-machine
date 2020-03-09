@@ -7,14 +7,14 @@ describe("Vending Machine", () => {
   beforeEach(() => {
     chipsAhoyMachine = new VendingMachine(Inventory);
   });
-  describe("when checking for inventory", () => {
-    it("should return everything in mockData.json", () => {
+  describe("when checking running getInventory", () => {
+    it("should return all products and change available", () => {
       expect(chipsAhoyMachine.getInventory()).toBe(Inventory);
     });
   });
 
-  describe("when taking in money", () => {
-    it("should return total price inserted into machine", () => {
+  describe("when the vending machine takes money", () => {
+    it("should return total amount inserted into machine", () => {
       expect(chipsAhoyMachine.takeMoney(1)).toEqual(1);
     });
   });
@@ -24,23 +24,23 @@ describe("Vending Machine", () => {
     });
   });
 
-  describe("when id matches and currently in stock", () => {
-    it("should reduce the current quantty by 1", () => {
+  describe("when selecting product while in stock", () => {
+    it("should reduce the current stock quantity by 1", () => {
       chipsAhoyMachine.selectChip("A1");
       expect(Inventory.products[0].currentQty).toEqual(9);
     });
   });
 
-  describe("when selecting the id", () => {
-    it("should give you the name of the product", () => {
+  describe("when choosing the product by selecting the id", () => {
+    it("should give you the name of the product as 'dispensed'", () => {
       expect(chipsAhoyMachine.selectChip("A1")).toEqual(
         "Here is your Sweet Chili Heat Doritos"
       );
     });
   });
 
-  describe("when selecting the id", () => {
-    it("should give you the name of the product", () => {
+  describe("when selecting an id that does not exist", () => {
+    it("should throw an error", () => {
       expect(() => chipsAhoyMachine.selectChip("B1")).toThrow();
     });
   });
@@ -52,14 +52,14 @@ describe("Vending Machine", () => {
   });
 
   describe("when dispensing, with insufficient fund", () => {
-    it("should return a string insufficient fund", () => {
+    it("should return a string 'insufficient funds'", () => {
       expect(chipsAhoyMachine.dispense("A1", 100)).toEqual(
         "Insufficient Funds"
       );
     });
   });
 
-  describe("when dispensing", () => {
+  describe("when dispensing a product", () => {
     it("should return the proper amount of change", () => {
       expect(chipsAhoyMachine.calculateChange(30010, 100)).toEqual({
         Dime: 1,
